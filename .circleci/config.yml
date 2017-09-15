@@ -1,0 +1,26 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: arke/cirlce-ci-gcc:latest
+     steps:
+       - checkout
+       - run:
+           name: Build
+           command: |
+               mkdir build
+               cd build
+               export CC=gcc-7
+               export CXX=g++-7
+               cmake ..
+               make  
+
+       - run:
+           name: Test
+           command: mkdir ~/junit/ && cd build && ./arke_test -s -r junit > ~/junit/result.xml
+           when: on_success
+
+       - store_test_results:
+          path: ~/junit
+       - store_artifacts:
+          path: ~/junit
