@@ -7,13 +7,13 @@
 namespace arke {
 
     // Set name
-    DesignationBuilder & DesignationBuilder::name(const std::string & name) {
+    DesignationBuilder &DesignationBuilder::name(const std::string &name) {
         this->name_ = name;
         return *this;
     }
 
     // Set organization
-    DesignationBuilder & DesignationBuilder::organization(const std::string & organization) {
+    DesignationBuilder &DesignationBuilder::organization(const std::string &organization) {
         this->organization_ = organization;
         return *this;
     }

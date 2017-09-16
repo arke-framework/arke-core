@@ -19,8 +19,8 @@ namespace arke {
         /// \brief Decode a json stream to object
         /// \param stream Output stream
         /// \return Object pointer
-        template <class Encoder, class Object>
-        static void encode(std::shared_ptr<Object> object, std::ostream & stream) {
+        template<class Encoder, class Object>
+        static void encode(std::shared_ptr<Object> object, std::ostream &stream) {
 
             if (!object) {
                 json jsonObject;

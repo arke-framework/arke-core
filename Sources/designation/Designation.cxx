@@ -7,24 +7,23 @@
 namespace arke {
 
     // Constructor
-    Designation::Designation(const std::string & organization, const std::string & name) :
-        organization_(organization), name_(name)
-    {
+    Designation::Designation(const std::string &organization, const std::string &name) :
+            organization_(organization), name_(name) {
 
     }
 
     // Organization name
-    const std::string & Designation::organization() const {
+    const std::string &Designation::organization() const {
         return organization_;
     }
 
     // Package name
-    const std::string & Designation::name() const {
+    const std::string &Designation::name() const {
         return name_;
     }
 
     // Override ==
-    bool Designation::operator==(const Designation & designation) {
+    bool Designation::operator==(const Designation &designation) {
 
         if (name_ != designation.name_) {
             return false;
@@ -38,7 +37,7 @@ namespace arke {
     }
 
     // Override operator
-    std::ostream & operator<<(std::ostream & ostream, const Designation & designation) {
+    std::ostream &operator<<(std::ostream &ostream, const Designation &designation) {
 
         ostream << "{";
         ostream << "'organization':'" << designation.organization_ << "',";

@@ -25,12 +25,12 @@ namespace arke {
         /// \brief Set name
         /// \param name Package name
         /// \return Current builder
-        DesignationBuilder & name(const std::string & name);
+        DesignationBuilder &name(const std::string &name);
 
         /// \brief Set organization
         /// \param name Organization name
         /// \return Current builder
-        DesignationBuilder & organization(const std::string & name);
+        DesignationBuilder &organization(const std::string &name);
 
         /// \return Designation
         DesignationPtr build();

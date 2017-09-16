@@ -30,6 +30,11 @@ add_library(
         Sources/designation/DesignationBuilder.cxx Sources/designation/DesignationBuilder.hxx
         Sources/designation/DesignationEncoder.cxx Sources/designation/DesignationEncoder.hxx
         Sources/designation/DesignationDecoder.cxx Sources/designation/DesignationDecoder.hxx
+
+        Sources/dependency/Dependency.cxx Sources/dependency/Dependency.hxx
+        Sources/dependency/DependencyBuilder.cxx Sources/dependency/DependencyBuilder.hxx
+        Sources/dependency/DependencyEncoder.cxx Sources/dependency/DependencyEncoder.hxx
+        Sources/dependency/DependencyDecoder.cxx Sources/dependency/DependencyDecoder.hxx
 )
 target_include_directories(arke
 
@@ -45,7 +50,7 @@ add_executable(
         Tests/catch.hpp
         Tests/main.cxx
         Tests/Designation_test.cxx
-)
+        Tests/Dependency_test.cxx)
 target_include_directories(
         arke_test
 

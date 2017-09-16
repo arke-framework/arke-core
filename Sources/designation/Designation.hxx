@@ -12,12 +12,13 @@
 namespace arke {
 
     class Designation;
+
     using DesignationPtr = std::shared_ptr<Designation>;
 
     /// \brief Designation
     class Designation {
 
-        friend std::ostream & operator<<(std::ostream &, const Designation &);
+        friend std::ostream &operator<<(std::ostream &, const Designation &);
 
     private:
 
@@ -32,27 +33,31 @@ namespace arke {
         /// \brief Constructor
         /// \param name Package name
         /// \param organization Organization name
-        explicit Designation(const std::string & organization, const std::string & name);
+        explicit Designation(const std::string &organization, const std::string &name);
 
         /// \return Organization name
-        const std::string & organization() const;
+        const std::string &organization() const;
 
         /// \return Package name
-        const std::string & name() const;
+        const std::string &name() const;
 
     public:
 
-        // Override ==
-        bool operator==(const Designation & designation);
+        /// \brief Override operator==
+        /// \param rhs other object
+        /// \return boolean
+        bool operator==(const Designation &designation);
 
-        // Override ==
-        bool operator!=(const Designation & designation) {
+        /// \brief Override operator!=
+        /// \param rhs other object
+        /// \return boolean
+        bool operator!=(const Designation &designation) {
             return !(*this == designation);
         }
     };
 
     // Override operator
-    std::ostream & operator<<(std::ostream & ostream, const Designation & designation);
+    std::ostream &operator<<(std::ostream &ostream, const Designation &designation);
 }
 
 #endif //ARKE_DESIGNATION_HXX

@@ -16,7 +16,7 @@
 
 using namespace arke;
 
-TEST_CASE( "Designation simple", "[designation]" ) {
+TEST_CASE("Designation simple", "[designation]") {
 
     // Designation builder
     auto designation = arke::DesignationBuilder{}
