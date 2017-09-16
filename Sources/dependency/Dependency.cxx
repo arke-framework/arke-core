@@ -6,7 +6,7 @@
 
 namespace arke {
 
-    Dependency::Dependency(DesignationPtr designation, const std::string version) :
+    Dependency::Dependency(DesignationPtr designation, const std::string &version) :
             designation_(designation), version_(version) {
 
     }

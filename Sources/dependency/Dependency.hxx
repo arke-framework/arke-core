@@ -33,7 +33,7 @@ namespace arke {
         /// Constructor
         /// \param designation Correct designation
         /// \param version Correct pattern
-        explicit Dependency(DesignationPtr designation, const std::string version);
+        explicit Dependency(DesignationPtr designation, const std::string &version);
 
     public:
 
